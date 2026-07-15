@@ -263,7 +263,7 @@ def publicate_data(hoymiles_h: Hoymiles, mqtt_h: MqttApi):
     if hoymiles_h.solar_data:
         try:
             json_ups = json.dumps(hoymiles_h.solar_data)
-            mqtt_h.public(MQTT_PUB + "/json" + "_" + str(hoymiles_h.plant_id), json_ups)
+            mqtt_h.public(MQTT_PUB + "/json_" + SHORT_NAME + "_" + str(hoymiles_h.plant_id), json_ups)
             mqtt_h.publicate_time = datetime.now()
             logger.info(f"Solar data publication...{datetime.now()}")
             mqtt_h.send_clients_status()
@@ -273,7 +273,7 @@ def publicate_data(hoymiles_h: Hoymiles, mqtt_h: MqttApi):
     for device in hoymiles_h.dtu_list:
         if len(device.data):
             json_ups = json.dumps(device.data)
-            mqtt_h.public(MQTT_PUB + "/json" + "_" + str(device.id), json_ups)
+            mqtt_h.public(MQTT_PUB + "/json_" + SHORT_NAME + "_" + str(device.id), json_ups)
             mqtt_h.publicate_time = datetime.now()
             logger.info(
                 f"{device.model_no}_{device.id} data publication...{datetime.now()}"
@@ -283,7 +283,7 @@ def publicate_data(hoymiles_h: Hoymiles, mqtt_h: MqttApi):
     for device in hoymiles_h.micro_list:
         if len(device.data):
             json_ups = json.dumps(device.data)
-            mqtt_h.public(MQTT_PUB + "/json" + "_" + str(device.id), json_ups)
+            mqtt_h.public(MQTT_PUB + "/json_" + SHORT_NAME + "_" + str(device.id), json_ups)
             mqtt_h.publicate_time = datetime.now()
             logger.info(
                 f"{device.init_hard_no}_{device.id} data publication...{datetime.now()}"
@@ -293,7 +293,7 @@ def publicate_data(hoymiles_h: Hoymiles, mqtt_h: MqttApi):
     for bms in hoymiles_h.bms_list:
         if len(bms.data):
             json_ups = json.dumps(bms.data)
-            mqtt_h.public(MQTT_PUB + "/json" + "_" + str(bms.id), json_ups)
+            mqtt_h.public(MQTT_PUB + "/json_" + SHORT_NAME + "_" + str(bms.id), json_ups)
             mqtt_h.publicate_time = datetime.now()
             logger.info(f"{bms.model}_{bms.id} data publication...{datetime.now()}")
             mqtt_h.send_clients_status()
