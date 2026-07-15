@@ -1,6 +1,6 @@
 {
   "name": "HoyMiles Solar Gateway (Fix)",
-  "version": "1.4.9",
+  "version": "1.4.9.1",
   "slug": "hoymiles_solardata_stable_fix",
   "description": "Read Hoymiles Gateway Solar Data stable Version.",
   "arch": [
