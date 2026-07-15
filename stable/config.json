@@ -1,6 +1,6 @@
 {
   "name": "HoyMiles Solar Gateway stable Addon",
-  "version": "1.4.9",
+  "version": "1.4.9.2",
   "slug": "hoymiles_solardata_stable",
   "description": "Read Hoymiles Gateway Solar Data stable Version.",
   "arch": [
@@ -10,7 +10,7 @@
     "amd64",
     "i386"
   ],
-  "url": "https://github.com/dmslabsbr/hoymiles/tree/master/stable",
+  "url": "https://github.com/rpouetpouet/hoymiles/tree/master/stable",
   "startup": "application",
   "boot": "auto",
   "init": false,
