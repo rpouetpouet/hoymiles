@@ -119,7 +119,7 @@ LOCAL_TIMEZONE = datetime.datetime.now(datetime.timezone.utc).astimezone().tzinf
 json_hass = {
     "sensor": """
 {
-  "stat_t": "home/$sid/json_$via_device",
+  "stat_t": "home/$sid/json_$identifiers",
   "name": "$name",
   "uniq_id": "$uniq_id",
   "val_tpl": "{{ value_json.$val_tpl }}",
@@ -132,7 +132,7 @@ json_hass = {
 }""",
     "binary_sensor": """
 {
-  "stat_t": "home/$sid/json_$via_device",
+  "stat_t": "home/$sid/json_$identifiers",
   "name": "$name",
   "uniq_id": "$uniq_id",
   "val_tpl": "{{ value_json.$val_tpl }}",
@@ -142,22 +142,22 @@ json_hass = {
 }""",
     "switch": """
 {
-  "stat_t": "home/$sid/json_$via_device",
+  "stat_t": "home/$sid/json_$identifiers",
   "name": "$name",
   "uniq_id": "$uniq_id",
   "val_tpl": "{{ value_json.$val_tpl }}",
-  "command_topic": "hoymiles/$via_device/set/$val_tpl",
+  "command_topic": "hoymiles/$identifiers/set/$val_tpl",
   "device": { $device_dict }
 }""",
     "number": """
 {
-  "stat_t": "home/$sid/json_$via_device",
+  "stat_t": "home/$sid/json_$identifiers",
   "name": "$name",
   "uniq_id": "$uniq_id",
   "min": "$min",
   "max": "$max",
   "val_tpl": "{{ value_json.$val_tpl }}",
-  "command_topic": "hoymiles/$via_device/set/$val_tpl",
+  "command_topic": "hoymiles/$identifiers/set/$val_tpl",
   "device": { $device_dict }
 }""",
 }
@@ -166,5 +166,4 @@ DEVICE_DICT = """ "name": "$device_name",
     "manufacturer": "$manufacturer",
     "model": "$model",
     "sw_version": "$sw_version",
-    "via_device": "$via_device",
     "identifiers": [ "$identifiers" ] """
