@@ -1,5 +1,13 @@
 <img src="https://github.com/dmslabsbr/hoymiles/raw/master/img/logo.png" alt="" width="200" />
 
+# ⚠️ Modified repository
+
+This repository is based on [dmslabsbr/hoymiles](https://github.com/dmslabsbr/hoymiles), which remains the original project.
+
+**The main code has been modified by [rpouetpouet](https://github.com/rpouetpouet)** to fix the **duplicate devices/entities** appearing in Home Assistant (MQTT discovery: `identifiers` / `via_device` handling). See the git history for details.
+
+👉 Use this repository for the fixed version, or the upstream one for the original unmodified code.
+
 # Important Info
 
 ## EDGE is again alive
@@ -17,7 +25,7 @@ I developed this program to integrate my solar system data to [Home Assistant](h
 
 Now, [Cosik](https://github.com/Cosik)  is helping too.
 
-[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fdmslabsbr%2Fhoymiles)
+[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Frpouetpouet%2Fhoymiles)
 
 Donate Cosik ->
 [![Donate Cosik](https://img.shields.io/badge/Donate-PayPal-green.svg)](paypal.me/cosik3d)
